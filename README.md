@@ -1,18 +1,39 @@
-## Getting Started
+# Sistema de Inventario - Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Sistema de gestión de inventario para pequeños negocios (bodegas, minimarkets), desarrollado en consola con Java aplicando Programación Orientada a Objetos.
 
-## Folder Structure
+## Funcionalidades
 
-The workspace contains two folders by default, where:
+- Registrar productos con validación de datos (precio, stock, código único)
+- Buscar productos por código
+- Actualizar stock
+- Eliminar productos
+- Listar todos los productos
+- Ordenar productos por precio (algoritmo Bubble Sort)
+- Alertar productos con stock bajo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Tecnologías
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Java 17
+- Programación Orientada a Objetos (encapsulamiento, validaciones)
+- Manejo de excepciones
+- Colecciones (ArrayList)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Arquitectura
 
-## Dependency Management
+El proyecto está organizado en tres capas:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- `modelo`: contiene la clase `Producto`, con sus atributos y validaciones
+- `servicio`: contiene la clase `Inventario`, con la lógica de negocio (CRUD, búsqueda, ordenamiento)
+- `app`: contiene la clase `Main`, con el menú interactivo de consola
+
+## Cómo ejecutarlo
+
+1. Clonar el repositorio
+2. Abrir la carpeta en VS Code o NetBeans
+3. Ejecutar la clase `Main.java`
+
+## Próximas mejoras
+
+- Persistencia de datos en archivo
+- Interfaz gráfica o web
