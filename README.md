@@ -27,13 +27,16 @@ Este proyecto fue construido como parte de mi ruta de aprendizaje hacia el desar
 ## 🏗️ Arquitectura
 
 El proyecto está organizado en tres capas, separando responsabilidades:
+
+```
 src/
 ├── modelo/
-│ └── Producto.java → Entidad con atributos, validaciones y comportamiento propio
+│   └── Producto.java       → Entidad con atributos, validaciones y comportamiento propio
 ├── servicio/
-│ └── Inventario.java → Lógica de negocio: CRUD, búsqueda, ordenamiento, persistencia
+│   └── Inventario.java     → Lógica de negocio: CRUD, búsqueda, ordenamiento, persistencia
 └── app/
-└── Main.java → Interfaz de consola y punto de entrada
+    └── Main.java           → Interfaz de consola y punto de entrada
+```
 
 **Por qué esta estructura:** la clase `Main` nunca manipula la lista de productos directamente — solo le pide cosas a `Inventario`, que a su vez nunca accede a los atributos privados de `Producto` sin pasar por sus métodos públicos. Esta separación de responsabilidades es la misma idea detrás de arquitecturas más avanzadas como Controller-Service-Repository, que planeo aplicar en mi próximo proyecto con Spring Boot.
 
