@@ -8,7 +8,8 @@ public class Producto {
     private int stock;
     private String categoria;
     private static final int STOCK_MINIMO = 5;
-
+    
+    
     public Producto(String codigo, String nombre, double precio, int stock, String categoria) {
         if (codigo == null || codigo.isEmpty()) {
             throw new IllegalArgumentException("El código no puede estar vacío");
